@@ -1,0 +1,14 @@
+[
+  "tests/test_registration.py::TestRegistration::test_cpf_validation",
+  "tests/test_registration.py::TestRegistration::test_email_password_match",
+  "tests/test_registration.py::TestRegistration::test_email_validation",
+  "tests/test_registration.py::TestRegistration::test_min_password_length",
+  "tests/test_registration.py::TestRegistration::test_phone_validation",
+  "tests/test_registration.py::TestRegistration::test_successful_registration",
+  "tests/test_registration_edge.py::TestRegistrationEdge::test_cpf_validation",
+  "tests/test_registration_edge.py::TestRegistrationEdge::test_email_password_match",
+  "tests/test_registration_edge.py::TestRegistrationEdge::test_email_validation",
+  "tests/test_registration_edge.py::TestRegistrationEdge::test_min_password_length",
+  "tests/test_registration_edge.py::TestRegistrationEdge::test_phone_validation",
+  "tests/test_registration_edge.py::TestRegistrationEdge::test_successful_registration"
+]

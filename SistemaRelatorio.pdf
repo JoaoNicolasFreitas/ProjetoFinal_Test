@@ -1,0 +1,180 @@
+ python -m pytest tests/test_registration.py -v
+ python -m pytest tests/test_registration_edge.py -v
+---
+
+# Sistema de Cadastro - Documentação
+
+## Visão Geral
+
+O sistema desenvolvido é um formulário de cadastro (CRUD - Create) construído com **React**, **TypeScript** e **Bootstrap**, que implementa validações robustas e uma interface moderna e responsiva.
+
+O sistema foi projetado para atender a todos os requisitos especificados, incluindo:
+
+* Validações de campos
+* Máscaras de entrada
+* Testes automatizados
+
+---
+
+## Funcionalidades Implementadas
+
+### 1. Formulário de Cadastro
+
+**Campos Implementados:**
+
+* Nome Completo
+* Telefone (com máscara)
+* CPF (com máscara)
+* Email
+* Senha
+* Confirmação de Email
+* Confirmação de Senha
+
+### 2. Validações
+
+**Nome:**
+
+* Obrigatório
+* Mínimo de 3 caracteres
+* Máximo de 50 caracteres
+
+**Telefone:**
+
+* Formato: (XX) XXXXX-XXXX
+* Validação de formato usando regex
+* Máscara automática durante digitação
+
+**CPF:**
+
+* Formato: XXX.XXX.XXX-XX
+* Validação de formato usando regex
+* Validação de dígitos verificadores
+* Máscara automática durante digitação
+
+**Email:**
+
+* Formato válido de email
+* Validação de domínio
+* Confirmação de email (double check)
+
+**Senha:**
+
+* Mínimo de 8 caracteres
+* Máximo de 20 caracteres
+* Confirmação de senha (double check)
+
+### 3. Interface
+
+* Design moderno com Bootstrap
+* Layout responsivo
+* Feedback visual para erros
+* Animações suaves
+* Ícones intuitivos
+* Mensagens de erro claras
+
+### 4. Testes Automatizados
+
+Testes implementados com **Selenium** e **PyTest** que cobrem todos os casos de teste especificados:
+
+* **Teste de Tamanho Mínimo da Senha**
+
+  * Valida senha com 8 caracteres (válido)
+  * Valida senha com 7 caracteres (inválido)
+
+* **Teste de Validação de Telefone**
+
+  * Valida formato (11) 91234-5678 (válido)
+  * Valida formato (11) 1234-5678 (inválido)
+
+* **Teste de Validação de CPF**
+
+  * Valida CPF 123.456.789-09 (válido)
+  * Valida CPF 123.456.789-00 (inválido)
+
+* **Teste de Validação de Email**
+
+  * Valida email [teste@exemplo.com](mailto:teste@exemplo.com) (válido)
+  * Valida email teste\@exemplo\@com (inválido)
+
+* **Teste de Double Check**
+
+  * Valida confirmação de email
+  * Valida confirmação de senha
+
+* **Teste de Sucesso**
+
+  * Valida cadastro completo com dados corretos
+
+---
+
+## Tecnologias Utilizadas
+
+**Frontend:**
+
+* React
+* TypeScript
+* Bootstrap 5
+* React Hook Form
+* Yup (validação)
+
+**Testes:**
+
+* Selenium
+* PyTest
+* WebDriver Manager
+
+---
+
+## Validações Implementadas
+
+* **Validação em Tempo Real:**
+
+  * Feedback imediato durante digitação
+  * Validação de campos relacionados
+  * Mensagens de erro contextuais
+
+* **Máscaras de Entrada:**
+
+  * Telefone: (XX) XXXXX-XXXX
+  * CPF: XXX.XXX.XXX-XX
+
+* **Validações de Formato:**
+
+  * Email com regex
+  * CPF com validação de dígitos
+  * Telefone com formato específico
+
+* **Validações de Confirmação:**
+
+  * Email e confirmação de email
+  * Senha e confirmação de senha
+
+---
+
+## Casos de Teste Automatizados
+
+O sistema inclui uma suíte completa de testes automatizados que validam:
+
+* Formato de campos
+* Validações de tamanho
+* Confirmações de dados
+* Fluxo completo de cadastro
+
+---
+
+## Conclusão
+
+O sistema atende a todos os requisitos especificados, oferecendo:
+
+* Interface moderna e responsiva
+* Validações robustas
+* Máscaras de entrada
+* Testes automatizados
+* Feedback claro ao usuário
+* Experiência de usuário otimizada
+
+O código é modular, bem documentado e segue as melhores práticas de desenvolvimento, facilitando manutenção e extensão futura.
+
+---
+
+Se quiser, posso ajudar a gerar esse conteúdo em Markdown formatado para o GitHub ou para um README. Quer?
